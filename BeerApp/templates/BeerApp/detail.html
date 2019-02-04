@@ -1,0 +1,27 @@
+<h1>{{ beer.brewery }} {{ beer.name }}</h1>
+<form method="post" novalidate>
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><b>Style</b></td>
+            <td>{{ beer.style }}</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>{{ beer.description }}</td>
+        </tr>
+        <tr>
+            <td><b>ABV</b></td>
+            <td>{{ beer.abv }}</td>
+        </tr>
+        <tr>
+            <td><b>IBU</b></td>
+            <td>{{ beer.ibu }}</td>
+        </tr>
+        <tr>
+            <td><b>Date Added</b></td>
+            <td><time>{{ beer.pub_date }}</time></td>
+        </tr>
+    </table>
+    <button type="submit">Delete</button>
+</form>

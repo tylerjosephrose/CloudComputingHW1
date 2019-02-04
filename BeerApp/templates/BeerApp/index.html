@@ -1,0 +1,13 @@
+<h1>Beers</h1>
+<a href="/beers/newbeer/">Add Beer</a>
+{% if beers %}
+    <ul>
+    {% for beer in beers %}
+        <li><a href="/beers/{{ beer.id }}/">{{ beer.brewery }} {{ beer.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No beers are available.</p>
+{% endif%}
+
+
